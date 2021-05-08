@@ -1,2 +1,3 @@
 ﻿  main.c
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(71,8): warning C4477: 'scanf' : 서식 문자열 '%d'에 'int *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
   Library_System.vcxproj -> C:\Users\junyanee\source\repos\Library_System\Debug\Library_System.exe
