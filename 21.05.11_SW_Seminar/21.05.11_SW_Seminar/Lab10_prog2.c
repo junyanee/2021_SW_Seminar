@@ -12,6 +12,8 @@ typedef struct contact {
 CONTACT* allocateContacts(int count);
 void inputContacts(CONTACT* contacts, int count);
 void printContacts(const CONTACT* contacts, int count);
+int CompareByName(const void *e1, const void *e2);
+int CompareByPhone(const void* e1, const void* e2);
 
 int main() {
 
@@ -26,7 +28,6 @@ int main() {
 	if (contacts == NULL) {
 		return -1;
 	}
-
 	inputContacts(contacts, cnt);
 
 	int select = -1;
@@ -42,12 +43,16 @@ int main() {
 		{
 		case 0:
 			return 0;
+
 		case 1:
 			printf("이름순 출력\n");
+			qsort(contacts, cnt, sizeof(CONTACT), CompareByName);
 			printContacts(contacts, cnt);
 			break;
+
 		case 2:
 			printf("전화번호순 출력\n");
+			qsort(contacts, cnt, sizeof(CONTACT), CompareByPhone);
 			printContacts(contacts, cnt);
 			break;
 
@@ -55,16 +60,13 @@ int main() {
 			printf("올바르지 않은 입력입니다.\n");
 			break;
 		}
-
 	}
-
-//	printContacts(contacts, cnt);
-
 	free(contacts);
 	contacts = NULL;
 
 	return 0;
 }
+
 CONTACT* allocateContacts(int count) {
 
 	CONTACT* result = NULL;
@@ -89,6 +91,16 @@ void printContacts(const CONTACT* contacts, int count) {
 
 	printf(" --- 전체 연락처 목록 ---\n");
 	for (i = 0; i < count; i++) {
-		printf("%-16s\n", contacts[i].name, contacts[i].phone);
+		printf("%-16s: %-16s\n", contacts[i].name, contacts[i].phone);
 	}
+}
+int CompareByName(const void* e1, const void* e2) {
+	const CONTACT* p1 = (const CONTACT*) e1;
+	const CONTACT* p2 = (const CONTACT*) e2;
+	return strcmp(p1->name, p2->name);
+}
+int CompareByPhone(const void* e1, const void* e2) {
+	const CONTACT* p1 = (const CONTACT*)e1;
+	const CONTACT* p2 = (const CONTACT*)e2;
+	return strcmp(p1->phone, p2->phone);
 }
