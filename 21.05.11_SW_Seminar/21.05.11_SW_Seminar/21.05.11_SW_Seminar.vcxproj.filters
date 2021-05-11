@@ -36,7 +36,7 @@
     <ClCompile Include="Lab9_prog1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Lab_prog3.c">
+    <ClCompile Include="Lab10_prog3.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
