@@ -18,17 +18,38 @@ int main(void) {
 	qsort(fonts, 3, sizeof(FONT), CompareByName);
 	// 굴림, 궁서, 돋음 순
 
-	char compareChar[40] = {NULL};
+	char userInput[40];
 	FONT* fontP;
 
-	printf("검색하고자 하는 폰트명을 입력하세요");
-	gets(compareChar);
+	int select = -1;
+	while (1) {
+		printf("메뉴를 선택하세요\n");
+		printf("0. 종료\n");
+		printf("1. 폰트 검색\n");
+		scanf("%d", &select);
+		getchar(); //엔터값 삭제
 
-	//	void bsearch(찾을 값의 주소, 찾을 대상이 되는 배열주소, 배열의 엘리먼트 개수, 배열크기, 비교함수);
-	fontP = (FONT *) bsearch(compareChar, fonts, 3, sizeof(FONT), CompareByName);
-	printFontInfo(fontP);
+		switch (select)
+		{
+		case 0:
+			return 0;
+			break;
 
+		case 1:
+			printf("폰트 검색\n");
+			printf("검색하고자 하는 폰트명을 입력하세요\n");
+			gets(userInput);
+			//	void bsearch(찾을 값의 주소, 찾을 대상이 되는 배열주소, 배열의 엘리먼트 개수, 배열크기, 비교함수);
+			fontP = (FONT *) bsearch(userInput, fonts, 3, sizeof(FONT), CompareByName);
+			printf("\n");
+			printFontInfo(fontP);
+			break;
 
+		default:
+			printf("잘못 입력하셨습니다.\n");
+			break;
+		}
+	}
 	return 0;
 }
 
@@ -44,4 +65,5 @@ void printFontInfo(const FONT* p) {
 	printf("폰트명: %s\n", p->faceName);
 	printf("폰트크기: %d\n", p->size);
 	printf("폰트두께: %d\n", p->weight);
+	printf("\n");
 }
