@@ -1,0 +1,2 @@
+﻿  소스.c
+C:\Users\junyanee\source\repos\21.05.11_SW_Seminar\21.05.11_SW_Seminar\소스.c(12,7): error C2040: 'bsearch': 'void ()'의 간접 참조 수준이 'void *(const void *,const void *,size_t,size_t,_CoreCrtNonSecureSearchSortCompareFunction)'과(와) 다릅니다.
