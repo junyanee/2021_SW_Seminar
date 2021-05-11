@@ -19,7 +19,7 @@ void sumArray(int(*p)[3], int* arr, int size) {
 			sum += p[i][j];
 			arr[i] = sum;
 		}
-		printf(" %d¹øÂ° ¹è¿­ÀÇ ÇÕ: %d\n", i+1, arr[i]);
+		printf(" %dë²ˆì§¸ ë°°ì—´ì˜ í•©: %d\n", i+1, arr[i]);
 		sum = 0;
 	}
 }
