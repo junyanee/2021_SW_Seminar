@@ -1,2 +1,5 @@
-﻿  소스.c
-C:\Users\junyanee\source\repos\21.05.11_SW_Seminar\21.05.11_SW_Seminar\소스.c(12,7): error C2040: 'bsearch': 'void ()'의 간접 참조 수준이 'void *(const void *,const void *,size_t,size_t,_CoreCrtNonSecureSearchSortCompareFunction)'과(와) 다릅니다.
+﻿  Lab10_prog2.c
+C:\Users\junyanee\source\repos\21.05.11_SW_Seminar\21.05.11_SW_Seminar\Lab10_prog2.c(83,7): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\junyanee\source\repos\21.05.11_SW_Seminar\21.05.11_SW_Seminar\Lab10_prog2.c(93,50): warning C4474: 'printf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+C:\Users\junyanee\source\repos\21.05.11_SW_Seminar\21.05.11_SW_Seminar\Lab10_prog2.c(93,50): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 2개가 제공되었습니다.
+  21.05.11_SW_Seminar.vcxproj -> C:\Users\junyanee\source\repos\21.05.11_SW_Seminar\Debug\21.05.11_SW_Seminar.exe
