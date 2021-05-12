@@ -59,6 +59,6 @@ void printContacts(const CONTACT* contacts, int count) {
 
 	printf(" --- 전체 연락처 목록 ---\n");
 	for (i = 0; i < count; i++) {
-		printf("%-16s\n", contacts[i].name, contacts[i].phone);
+		printf("%-16s: %-16s\n", contacts[i].name, contacts[i].phone);
 	}
 }
