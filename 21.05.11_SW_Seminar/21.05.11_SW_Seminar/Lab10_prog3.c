@@ -9,7 +9,6 @@ typedef struct font {
 } FONT;
 
 int CompareByName(const void* e1, const void* e2);
-int Compare(const void *cmp1, const void* cmp2);
 void printFontInfo(const FONT* p);
 
 int main(void) {
@@ -57,9 +56,6 @@ int CompareByName(const void* e1, const void* e2) {
 	const FONT* p1 = (const FONT*)e1;
 	const FONT* p2 = (const FONT*)e2;
 	return strcmp(p1->faceName, p2->faceName);
-}
-int Compare(const void* cmp1, const void* cmp2) {
-	return strcmp((char* ) cmp1, (char* ) cmp2);
 }
 void printFontInfo(const FONT* p) {
 	printf("ÆùÆ®¸í: %s\n", p->faceName);
