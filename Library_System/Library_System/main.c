@@ -126,7 +126,9 @@ void findBookByAuthor(BOOK* books) {
 	char userInput[30] = { NULL };
 	printf("검색하고자 하는 저자를 입력하세요: \n");
 	gets(userInput);
+	puts(userInput);
 	BOOK* authorP = (BOOK*)bsearch(userInput, books, 10, sizeof(BOOK), compareByAuthor);
+	puts(userInput);
 	if (authorP != NULL) {
 		printBookInfo(authorP);
 	}
@@ -139,8 +141,10 @@ void findBookByTitle(BOOK* books) {
 	char userInput[30] = { NULL };
 	printf("검색하고자 하는 제목을 입력하세요: \n");
 	gets(userInput);
+	puts(userInput);
 	// void bsearch(찾을 값의 주소, 찾을 대상이 되는 배열주소, 배열의 엘리먼트 개수, 배열크기, 비교함수);
 	BOOK* titleP = (BOOK*)bsearch(userInput, books, 10, sizeof(BOOK), compareByName);
+	puts(userInput);
 	if (titleP != NULL) {
 		printBookInfo(titleP);
 	}

@@ -26,5 +26,5 @@ C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(99,1): warni
 C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(100,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
 C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(116,27): warning C4028: 정식 매개 변수 1이(가) 선언과 다릅니다.
 C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(126,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(139,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(141,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
   Library_System.vcxproj -> C:\Users\junyanee\source\repos\Library_System\Debug\Library_System.exe
