@@ -8,7 +8,7 @@ typedef struct book {
 	int price;
 }BOOK;
 
-void addBook(BOOK* books);
+void addBook(BOOK* books, int count);
 void findBookByAuthor(BOOK* books);
 void findBookByTitle(BOOK* books);
 void orderByPrice(BOOK* books);
@@ -17,12 +17,12 @@ int compareByPrice(const void* book1, const void* book2);
 int compareByName(const void* book1, const void* book2);
 int compareByAuthor(const void* book1, const void* book2);
 
+int count = 0;
 
 int main(void) {
 
 	int select = -1;
 	BOOK* books[10] = { NULL };
-	int count = 0;
 
 	while (select != 5) {
 		printf("도서 관리 프로그램\n");
@@ -40,25 +40,30 @@ int main(void) {
 		{
 		case 1 :
 			printf("도서 입력을 선택하셨습니다.\n");
-			addBook(books);
-			showBook(books, sizeof(books));
+			addBook(books, count);
+			showBook(books, count);
 			break;
 
 		case 2 :
 			printf("저자별 검색을 선택하셨습니다.\n");
+			findBookByAuthor(books);
 			break;
+
 		case 3 :
 			printf("제목 검색을 선택하셨습니다.\n");
+			findBookByTitle(books);
 
 			break;
 		case 4 :
 			printf("가격 순으로 정렬을 선택하셨습니다.\n");
 			orderByPrice(books);
-			showBook(books, sizeof(books));
+			showBook(books, count);
 			break;
+
 		case 5 :
 			printf("종료합니다.\n");
 			break;
+
 		default:
 			printf("잘못된 입력입니다.\n");
 		}
@@ -67,10 +72,13 @@ int main(void) {
 	return 0;
 }
 
-void addBook(BOOK* book) {
+void addBook(BOOK* book, int count) {
 	char title[40] = { NULL };
 	char author[30] = { NULL };
 	int price = 0;
+
+//	book[count] = malloc(sizeof(BOOK));
+// 메모리할당해야함..
 
 	printf("*** 새로운 도서를 추가합니다 ***\n");
 	printf("제목을 입력하세요: \n");
@@ -82,6 +90,7 @@ void addBook(BOOK* book) {
 	printf("가격을 입력하세요: \n");
 	scanf("%d", &book->price);
 	getchar();
+	count++;
 
 }
 void showBook(const BOOK* books, int count) {
