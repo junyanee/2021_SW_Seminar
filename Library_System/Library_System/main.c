@@ -54,11 +54,13 @@ int main(void) {
 
 		case 2 :
 			printf("저자 검색을 선택하셨습니다.\n");
+			orderByAuthor(books, count);
 			findBookByAuthor(books);
 			break;
 
 		case 3 :
 			printf("제목 검색을 선택하셨습니다.\n");
+			orderByName(books, count);
 			findBookByTitle(books);
 
 			break;
@@ -76,6 +78,11 @@ int main(void) {
 			showBook(books, count);
 			break;
 
+		case 7:
+			orderByAuthor(books, count); //오름차순
+
+		case 8:
+			orderByName(books, count);
 		default:
 			printf("잘못된 입력입니다.\n");
 		}
@@ -119,7 +126,6 @@ void findBookByAuthor(BOOK* books) {
 	char userInput[30] = { NULL };
 	printf("검색하고자 하는 저자를 입력하세요: \n");
 	gets(userInput);
-	orderByAuthor(books, count); //오름차순
 	BOOK* authorP = (BOOK*)bsearch(userInput, books, 10, sizeof(BOOK), compareByAuthor);
 	if (authorP != NULL) {
 		printBookInfo(authorP);
@@ -134,10 +140,9 @@ void findBookByTitle(BOOK* books) {
 	printf("검색하고자 하는 제목을 입력하세요: \n");
 	gets(userInput);
 	// void bsearch(찾을 값의 주소, 찾을 대상이 되는 배열주소, 배열의 엘리먼트 개수, 배열크기, 비교함수);
-	orderByName(books, count); //오름차순
 	BOOK* titleP = (BOOK*)bsearch(userInput, books, 10, sizeof(BOOK), compareByName);
 	if (titleP != NULL) {
-	printBookInfo(titleP);
+		printBookInfo(titleP);
 	}
 	else {
 		printf("해당 자료는 없습니다.");
