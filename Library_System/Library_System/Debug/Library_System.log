@@ -1,3 +1,16 @@
 ﻿  main.c
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(71,8): warning C4477: 'scanf' : 서식 문자열 '%d'에 'int *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(43,17): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(43,12): warning C4024: 'addBook': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(44,18): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(44,13): warning C4024: 'showBook': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(56,22): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(56,17): warning C4024: 'orderByPrice': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(57,18): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(57,13): warning C4024: 'showBook': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(77,6): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(71,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(72,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(87,27): warning C4028: 정식 매개 변수 1이(가) 선언과 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(95,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(101,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
   Library_System.vcxproj -> C:\Users\junyanee\source\repos\Library_System\Debug\Library_System.exe
