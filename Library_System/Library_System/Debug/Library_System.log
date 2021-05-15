@@ -3,28 +3,54 @@ C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(51,17): warn
 C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(51,12): warning C4024: 'addBook': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
 C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(52,18): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
 C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(52,13): warning C4024: 'showBook': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(57,23): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(57,18): warning C4024: 'orderByAuthor': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(58,26): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(58,21): warning C4024: 'findBookByAuthor': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(63,21): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(63,16): warning C4024: 'orderByName': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(64,25): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(64,20): warning C4024: 'findBookByTitle': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(69,22): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(69,17): warning C4024: 'orderByPrice': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(70,18): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(70,13): warning C4024: 'showBook': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(78,18): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(78,13): warning C4024: 'showBook': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(57,26): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(57,21): warning C4024: 'findBookByAuthor': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(62,25): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(62,20): warning C4024: 'findBookByTitle': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(67,22): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(67,17): warning C4024: 'orderByPrice': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(68,18): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(68,13): warning C4024: 'showBook': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(77,18): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(77,13): warning C4024: 'showBook': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
 C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(82,23): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
 C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(82,18): warning C4024: 'orderByAuthor': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(85,21): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(85,16): warning C4024: 'orderByName': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(105,6): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(99,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(100,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(116,27): warning C4028: 정식 매개 변수 1이(가) 선언과 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(126,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(141,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-  Library_System.vcxproj -> C:\Users\junyanee\source\repos\Library_System\Debug\Library_System.exe
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(86,21): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(86,16): warning C4024: 'orderByName': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(108,6): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(102,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(103,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(119,27): warning C4028: 정식 매개 변수 1이(가) 선언과 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(129,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(167,43): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(171,42): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(175,44): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(179,58): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(180,37): error C2065: 'book1': 선언되지 않은 식별자입니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(181,37): error C2065: 'book2': 선언되지 않은 식별자입니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(182,34): warning C4098: 'findBookByTitle': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(185,57): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(186,37): error C2065: 'book1': 선언되지 않은 식별자입니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(187,37): error C2065: 'book2': 선언되지 않은 식별자입니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(188,35): warning C4098: 'findBookByTitle': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(191,59): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(192,37): error C2065: 'book1': 선언되지 않은 식별자입니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(193,37): error C2065: 'book2': 선언되지 않은 식별자입니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(194,39): warning C4098: 'findBookByTitle': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(197,35): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(198,26): error C2065: 'p': 선언되지 않은 식별자입니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(198,28): error C2223: '->name' 왼쪽은 구조체/공용 구조체를 가리켜야 합니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(198,9): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(198,9): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 0개가 제공되었습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(198,9): message : 누락된 variadic 인수 1이(가) 서식 문자열 '%s'에 필요합니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(199,26): error C2065: 'p': 선언되지 않은 식별자입니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(199,28): error C2223: '->author' 왼쪽은 구조체/공용 구조체를 가리켜야 합니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(199,9): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(199,9): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 0개가 제공되었습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(199,9): message : 누락된 variadic 인수 1이(가) 서식 문자열 '%s'에 필요합니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(200,29): error C2065: 'p': 선언되지 않은 식별자입니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(200,31): error C2223: '->price' 왼쪽은 구조체/공용 구조체를 가리켜야 합니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(200,9): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(200,9): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 0개가 제공되었습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(200,9): message : 누락된 variadic 인수 1이(가) 서식 문자열 '%d'에 필요합니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main.c(142): fatal error C1075: '{': 일치하는 토큰을 찾을 수 없습니다.
