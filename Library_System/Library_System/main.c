@@ -74,17 +74,22 @@ int main(void) {
 			printf("종료합니다.\n");
 			break;
 
+		// for debug
 		case 6 :
 			showBook(books, count);
 			break;
 
+		// for debug
 		case 7:
 			orderByAuthor(books, count); //오름차순
-
+			break;
+		// for debug
 		case 8:
 			orderByName(books, count);
+			break;
 		default:
 			printf("잘못된 입력입니다.\n");
+			break;
 		}
 	}
 
@@ -133,6 +138,7 @@ void findBookByAuthor(BOOK* books) {
 		printBookInfo(authorP);
 	}
 	else {
+		printBookInfo(authorP);
 		printf("해당 자료는 없습니다.");
 	}
 	
@@ -149,6 +155,7 @@ void findBookByTitle(BOOK* books) {
 		printBookInfo(titleP);
 	}
 	else {
+		printBookInfo(titleP);
 		printf("해당 자료는 없습니다.");
 	}
 	
@@ -156,27 +163,33 @@ void findBookByTitle(BOOK* books) {
 void orderByPrice(BOOK* books, int count) {
 	qsort(books, count, sizeof(BOOK), compareByPrice);
 }
+
 void orderByName(BOOK* books, int count) {
 	qsort(books, count, sizeof(BOOK), compareByName);
 }
+
 void orderByAuthor(BOOK* books, int count) {
 	qsort(books, count, sizeof(BOOK), compareByAuthor);
 }
+
 int compareByPrice(const void* book1, const void* book2) {
 	const BOOK* b1 = (const BOOK*)book1;
 	const BOOK* b2 = (const BOOK*)book2;
 	return - (b1->price - b2->price);
 }
+
 int compareByName(const void* book1, const void* book2) {
 	const BOOK* b1 = (const BOOK*)book1;
 	const BOOK* b2 = (const BOOK*)book2;
 	return strcmp(b1->name, b2->name);
 }
+
 int compareByAuthor(const void* book1, const void* book2) {
 	const BOOK* b1 = (const BOOK*)book1;
 	const BOOK* b2 = (const BOOK*)book2;
 	return strcmp(b1->author, b2->author);
 }
+
 void printBookInfo(const BOOK* p) {
 	printf("제목: %s\n", p->name);
 	printf("저자: %s\n", p->author);
