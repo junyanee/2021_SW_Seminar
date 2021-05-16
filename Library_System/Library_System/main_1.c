@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+// 구조체 포인터 배열 사용, 최대 10개의 도서 정보를 저장
+
 typedef struct book {
 	char name[40];
 	char author[30];
@@ -11,14 +13,11 @@ typedef struct book {
 void addBook(BOOK* books, int* pc);
 void findBookByAuthor(BOOK* books);
 void findBookByTitle(BOOK* books);
-void orderByPrice(BOOK* books, int count);
 void showBook(BOOK* books, int count);
 int compareByPrice(const void* book1, const void* book2);
 int compareByName(const void* book1, const void* book2);
 int compareByAuthor(const void* book1, const void* book2);
 void printBookInfo(const BOOK* p);
-void orderByName(BOOK* books, int count);
-void orderByAuthor(BOOK* books, int count);
 
 int count = 0;
 
@@ -26,11 +25,11 @@ int main(void) {
 
 	int select = -1;
 	int* pc = &count;
-
+	
 	BOOK* books[10] = { NULL };
-
-	for (int i = 0; i < sizeof(books) / sizeof(BOOK*); i++) {
+	for (int i = 0; i < sizeof(books)/sizeof(BOOK); i++) {
 		books[i] = malloc(sizeof(BOOK));
+		memset(books[i], 0, sizeof(BOOK));
 	}
 
 	while (1) {
@@ -49,56 +48,47 @@ int main(void) {
 		{
 		case 1 :
 			printf("도서 입력을 선택하셨습니다.\n");
-			addBook(books, pc);
-			showBook(books, count);
+			if (count == 10) {
+				printf("저장할 수 있는 공간이 다 찼습니다.\n");
+			}
+			else {
+				addBook(books, pc);
+				showBook(books, count);
+			}
 			break;
 
 		case 2 :
 			printf("저자 검색을 선택하셨습니다.\n");
-			orderByAuthor(books, count);
+			qsort(books, count, sizeof(BOOK), compareByAuthor);
 			findBookByAuthor(books);
 			break;
 
 		case 3 :
 			printf("제목 검색을 선택하셨습니다.\n");
-			orderByName(books, count);
+			qsort(books, count, sizeof(BOOK), compareByName);
 			findBookByTitle(books);
-
 			break;
+
 		case 4 :
 			printf("가격 순으로 정렬을 선택하셨습니다.\n");
-			orderByPrice(books, count);
+			qsort(books, count, sizeof(BOOK), compareByPrice);
 			showBook(books, count);
 			break;
 
 		case 5 :
 			printf("종료합니다.\n");
+			for (int i = 0; i < 10; i++) {
+				free(books[i]);
+				books[i] = NULL;
+			}
 			return 0;
 			break;
 
-		// for debug
-		case 6 :
-			showBook(books, count);
-			break;
-
-		// for debug
-		case 7:
-			orderByAuthor(books, count); //오름차순
-			break;
-		// for debug
-		case 8:
-			orderByName(books, count);
-			break;
 		default:
 			printf("잘못된 입력입니다.\n");
 			break;
 		}
 	}
-
-	for (int i = 0; i < sizeof(books) / sizeof(BOOK*); i++) {
-		free(books[i]);
-	}
-
 	return 0;
 }
 
@@ -129,65 +119,31 @@ void showBook(const BOOK* books, int count) {
 		printf("\n");
 	}
 }
+
 void findBookByAuthor(BOOK* books) {
-	char userInput[30] = { NULL };
-	BOOK authorKey;
 	printf("검색하고자 하는 저자를 입력하세요: \n");
+	BOOK authorKey;
 	gets(authorKey.author);
-	BOOK* authorP = (BOOK*)bsearch(authorKey.author, books, 10, sizeof(BOOK), compareByAuthor);
-	puts(authorKey.author);
+	BOOK* authorP = (int*)bsearch(&authorKey, books, count, sizeof(BOOK), compareByAuthor);
 	if (authorP != NULL) {
 		printBookInfo(authorP);
 	}
 	else {
-		printBookInfo(authorP);
-		printf("해당 자료는 없습니다.");
+		printf("해당 자료는 없습니다.\n");
 	}
-
-/*	for (int i = 0; i < count; i++) {
-		if (strcmp(userInput, books[i].author) == 0) {
-			printf("제목: %s\n", books[i].name);
-			printf("저자: %s\n", books[i].author);
-			printf("가격: %d원\n", books[i].price);
-			printf("\n");
-		}
-	}*/
-	
 }
+
 void findBookByTitle(BOOK* books) {
-	char userInput[30] = { NULL };
 	printf("검색하고자 하는 제목을 입력하세요: \n");
-	gets(userInput);
-	// void bsearch(찾을 값의 주소, 찾을 대상이 되는 배열주소, 배열의 엘리먼트 개수, 배열크기, 비교함수);
-/*	for (int i = 0; i < count; i++) {
-		if (strcmp(userInput, books[i].name) == 0) {
-			printf("제목: %s\n", books[i].name);
-			printf("저자: %s\n", books[i].author);
-			printf("가격: %d원\n", books[i].price);
-			printf("\n");
-		}
-	}*/
-	
-	BOOK* titleP= (BOOK*)bsearch(userInput, books, 10, sizeof(BOOK), compareByName);
-		if (titleP != NULL) {
-			printBookInfo(titleP);
-		}
-		else {
-			printBookInfo(titleP);
-			printf("해당 자료는 없습니다.");
-		}
-}
-
-void orderByPrice(BOOK* books, int count) {
-	qsort(books, count, sizeof(BOOK), compareByPrice);
-}
-
-void orderByName(BOOK* books, int count) {
-	qsort(books, count, sizeof(BOOK), compareByName);
-}
-
-void orderByAuthor(BOOK* books, int count) {
-	qsort(books, count, sizeof(BOOK), compareByAuthor);
+	BOOK titleKey;
+	gets(titleKey.name);
+	BOOK* titleP = (int*)bsearch(&titleKey, books, count, sizeof(BOOK), compareByName);
+	if (titleP != NULL) {
+		printBookInfo(titleP);
+	}
+	else {
+		printf("해당 자료는 없습니다.\n");
+	}
 }
 
 int compareByPrice(const void* book1, const void* book2) {
