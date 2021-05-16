@@ -21,11 +21,12 @@ void orderByName(BOOK* books, int count);
 void orderByAuthor(BOOK* books, int count);
 
 int count = 0;
-int* pc = &count;
 
 int main(void) {
 
 	int select = -1;
+	int* pc = &count;
+
 	BOOK* books[10] = { NULL };
 
 	for (int i = 0; i < sizeof(books) / sizeof(BOOK*); i++) {
@@ -132,10 +133,7 @@ void findBookByAuthor(BOOK* books) {
 	char userInput[30] = { NULL };
 	BOOK authorKey;
 	printf("검색하고자 하는 저자를 입력하세요: \n");
-	gets(userInput);
-
-	strcpy(authorKey.author, userInput);
-	puts(authorKey.author);
+	gets(authorKey.author);
 	BOOK* authorP = (BOOK*)bsearch(authorKey.author, books, 10, sizeof(BOOK), compareByAuthor);
 	puts(authorKey.author);
 	if (authorP != NULL) {

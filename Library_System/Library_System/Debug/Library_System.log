@@ -1,30 +1,8 @@
-﻿  main_1.c
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(51,17): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(51,12): warning C4024: 'addBook': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(52,18): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(52,13): warning C4024: 'showBook': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(57,23): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(57,18): warning C4024: 'orderByAuthor': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(58,26): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(58,21): warning C4024: 'findBookByAuthor': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(63,21): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(63,16): warning C4024: 'orderByName': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(64,25): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(64,20): warning C4024: 'findBookByTitle': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(69,22): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(69,17): warning C4024: 'orderByPrice': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(70,18): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(70,13): warning C4024: 'showBook': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(80,18): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(80,13): warning C4024: 'showBook': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(85,23): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(85,18): warning C4024: 'orderByAuthor': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(89,21): warning C4047: '함수': 'BOOK *'의 간접 참조 수준이 'BOOK *[10]'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(89,16): warning C4024: 'orderByName': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(111,6): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(105,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(106,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(122,27): warning C4028: 정식 매개 변수 1이(가) 선언과 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(132,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-C:\Users\junyanee\source\repos\Library_System\Library_System\main_1.c(160,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+﻿  main_2.c
+C:\Users\junyanee\source\repos\Library_System\Library_System\main_2.c(123,6): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main_2.c(117,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main_2.c(118,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main_2.c(134,27): warning C4028: 정식 매개 변수 1이(가) 선언과 다릅니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main_2.c(147,1): warning C4133: '초기화 중': 'int *'과(와) 'BOOK *' 사이의 형식이 호환되지 않습니다.
+C:\Users\junyanee\source\repos\Library_System\Library_System\main_2.c(159,1): warning C4133: '초기화 중': 'int *'과(와) 'BOOK *' 사이의 형식이 호환되지 않습니다.
   Library_System.vcxproj -> C:\Users\junyanee\source\repos\Library_System\Debug\Library_System.exe
