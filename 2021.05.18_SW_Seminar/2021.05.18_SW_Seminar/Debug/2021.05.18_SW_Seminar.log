@@ -1,3 +1,4 @@
-﻿  Lab11_prog2.c
-C:\Users\junyanee\source\repos\2021.05.18_SW_Seminar\2021.05.18_SW_Seminar\font.h(3,21): error C2011: 'font': 'struct' 형식 재정의
-C:\Users\junyanee\source\repos\2021.05.18_SW_Seminar\2021.05.18_SW_Seminar\font.h(3): message : 'font' 선언을 참조하십시오.
+﻿  Lab11_prog3_Main.c
+  Lab11_prog3_Rect.c
+  코드를 생성하고 있습니다...
+  2021.05.18_SW_Seminar.vcxproj -> C:\Users\junyanee\source\repos\2021.05.18_SW_Seminar\Debug\2021.05.18_SW_Seminar.exe
