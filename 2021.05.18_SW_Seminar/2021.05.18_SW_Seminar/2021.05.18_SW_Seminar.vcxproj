@@ -142,7 +142,10 @@
     <ClCompile Include="Lab11_prog1.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Lab11_prog3.c" />
+    <ClCompile Include="Lab11_prog2.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="font.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
