@@ -1,0 +1,7 @@
+﻿  Lab11_prog1.c
+C:\Users\junyanee\source\repos\2021.05.18_SW_Seminar\2021.05.18_SW_Seminar\Lab11_prog1.c(39,22): error C2011: 'point': 'struct' 형식 재정의
+C:\Users\junyanee\source\repos\2021.05.18_SW_Seminar\2021.05.18_SW_Seminar\Lab11_prog1.c(7): message : 'point' 선언을 참조하십시오.
+C:\Users\junyanee\source\repos\2021.05.18_SW_Seminar\2021.05.18_SW_Seminar\Lab11_prog1.c(46,5): error C2084: 'int main(void)' 함수에 이미 본문이 있습니다.
+C:\Users\junyanee\source\repos\2021.05.18_SW_Seminar\2021.05.18_SW_Seminar\Lab11_prog1.c(14): message : 'main'의 이전 정의를 참조하십시오.
+C:\Users\junyanee\source\repos\2021.05.18_SW_Seminar\2021.05.18_SW_Seminar\Lab11_prog1.c(55,8): error C2084: 'double Distance(const POINT *,const POINT *)' 함수에 이미 본문이 있습니다.
+C:\Users\junyanee\source\repos\2021.05.18_SW_Seminar\2021.05.18_SW_Seminar\Lab11_prog1.c(23): message : 'Distance'의 이전 정의를 참조하십시오.
