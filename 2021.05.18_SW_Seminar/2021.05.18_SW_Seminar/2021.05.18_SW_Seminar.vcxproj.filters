@@ -27,6 +27,9 @@
     <ClCompile Include="Lab11_prog3_Rect.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Lab11_prog4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="font.h">
