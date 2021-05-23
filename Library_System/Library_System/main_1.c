@@ -38,7 +38,8 @@ int main(void) {
 		printf("2. 저자 검색\n");
 		printf("3. 제목 검색\n");
 		printf("4. 가격 순으로 정렬\n");
-		printf("5. 종료\n");
+		printf("5. 전체 도서 정보 출력\n");
+		printf("6. 종료\n");
 		printf("\n");
 		printf("메뉴를 선택하세요 : \n");
 		scanf("%d", &select);
@@ -76,6 +77,10 @@ int main(void) {
 			break;
 
 		case 5 :
+			showBook(books, count);
+			break;
+
+		case 6 :
 			printf("종료합니다.\n");
 			for (int i = 0; i < 10; i++) {
 				free(books[i]);
