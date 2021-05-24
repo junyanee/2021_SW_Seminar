@@ -16,6 +16,20 @@ BOOK* allocateBooks(int* nb) {
 	return result;
 }
 
+BOOK* reallocateBooks(BOOK* books, int* nb) {
+
+	BOOK* backUp = books;
+	books = (BOOK*)realloc(books, sizeof(BOOK) * (*nb) * 2);
+	if (books == NULL) {
+		printf("메모리 재할당에 실패했습니다. 원래 상태로 복구합니다\n");
+		books = backUp;
+	}
+	else {
+		printf("메모리 재할당 성공\n");
+	}
+	return books;
+}
+
 int freeMemory(BOOK* books) {
 	free(books);
 	books = NULL;
@@ -61,8 +75,8 @@ void findBookByAuthor(BOOK* books) {
 	BOOK* authorP = (int*)bsearch(&authorKey, books, 10, sizeof(BOOK), compareByAuthor);
 	if (authorP != NULL) {
 		printBookInfo(authorP);
-		printf("해당 자료를 수정하시겠습니까?\n");
-		printf("1. 수정     2. 나가기");
+		printf("해당 자료를 수정 혹은 삭제하시겠습니까?\n");
+		printf("1. 수정     2. 삭제     3. 나가기");
 		scanf("%d", &modifySelect);
 		getchar();
 		switch (modifySelect)
@@ -77,7 +91,10 @@ void findBookByAuthor(BOOK* books) {
 			scanf("%d", &authorP->price);
 			getchar();
 			break;
-		case 2: 
+		case 2:
+			printf("===책 정보를 삭제합니다.===\n");
+			break;
+		case 3: 
 			printf("메뉴로 돌아갑니다.\n");
 			break;
 		default:

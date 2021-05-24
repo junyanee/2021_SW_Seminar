@@ -6,19 +6,6 @@
 
 // 프로그램이 시작될 때 최대 저장 가능한 도서 정보의 개수를 입력 받아서 동적 메모리에 book 구조체 배열을 한꺼번에 할당
 
-
-BOOK* reallocateBooks(BOOK* books, int* nb) {
-	BOOK* backUp = books;
-	books = (BOOK*)realloc(books, sizeof(BOOK) * (*nb)*2);
-	if (books == NULL) {
-		printf("메모리 재할당에 실패했습니다. 원래 상태로 복구합니다\n");
-		books = backUp;
-	}
-	else {
-		printf("메모리 재할당 성공");
-	}
-	return books;
-}
 int main(void) {
 
 	int count = 0, numOfBook = 0;
@@ -44,17 +31,14 @@ int main(void) {
 		switch (printMenu())
 		{
 		case 1:
-			printf("도서 입력을 선택하셨습니다.");
+			printf("도서 입력을 선택하셨습니다.\n");
 			printf("[%d권]까지 추가 저장할 수 있습니다.\n", numOfBook - count);
 			if (count == numOfBook) {
-				printf("저장할 수 있는 공간이 다 찼습니다.\n");
-				printf("추가 저장을 위해 [1권]의 메모리를 할당합니다.");
-				numOfBook = numOfBook + 1;
-				printf("numofBook: %d,  count: %d", numOfBook, count);
-				books = reallocateBooks(books, *nb);
-				printf("numofBook: %d,  count: %d", numOfBook, count);
+				printf("=== 저장할 수 있는 공간이 다 찼습니다.=== \n");
+				printf("추가 저장을 위해 [5권]의 메모리를 할당합니다.\n");
+				numOfBook += 5;
+				books = reallocateBooks(books, nb);
 				addBook(books, pc);
-
 			}
 			else {
 				addBook(books, pc);

@@ -10,6 +10,7 @@ typedef struct book {
 } BOOK;
 
 BOOK* allocateBooks(int * nb);
+BOOK* reallocateBooks(BOOK* books, int* nb);
 int freeMemory(BOOK* books);
 void addBook(BOOK* books, int* pc);
 void showBook(BOOK* books, int* pc);
