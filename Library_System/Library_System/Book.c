@@ -19,7 +19,7 @@ BOOK* allocateBooks(int* nb) {
 BOOK* reallocateBooks(BOOK* books, int* nb) {
 
 	BOOK* backUp = books;
-	books = (BOOK*)realloc(books, sizeof(BOOK) * (*nb) * 2);
+	books = (BOOK*)realloc(books, sizeof(BOOK) * ((*nb) + 5));
 	if (books == NULL) {
 		printf("메모리 재할당에 실패했습니다. 원래 상태로 복구합니다\n");
 		books = backUp;
@@ -67,7 +67,7 @@ void showBook(const BOOK* books, int* pc) {
 	printf("==================================\n");
 }
 
-void findBookByAuthor(BOOK* books) {
+void findBookByAuthor(BOOK* books, int *pc, int *nb) {
 	int modifySelect = -1;
 	printf("검색하고자 하는 저자를 입력하세요: ");
 	BOOK authorKey;
@@ -93,6 +93,9 @@ void findBookByAuthor(BOOK* books) {
 			break;
 		case 2:
 			printf("===책 정보를 삭제합니다.===\n");
+			memset(authorP, NULL, sizeof(BOOK));
+			(*nb)--;
+			(*pc)--;
 			break;
 		case 3: 
 			printf("메뉴로 돌아갑니다.\n");
@@ -108,7 +111,7 @@ void findBookByAuthor(BOOK* books) {
 	}
 }
 
-void findBookByTitle(BOOK* books) {
+void findBookByTitle(BOOK* books, int* pc, int* nb) {
 	int modifySelect = -1;
 	printf("검색하고자 하는 제목을 입력하세요: ");
 	BOOK titleKey;
@@ -117,7 +120,7 @@ void findBookByTitle(BOOK* books) {
 	if (titleP != NULL) {
 		printBookInfo(titleP);
 		printf("해당 자료를 수정하시겠습니까?\n");
-		printf("1. 수정     2. 나가기");
+		printf("1. 수정     2. 삭제     3. 나가기");
 		scanf("%d", &modifySelect);
 		getchar();
 		switch (modifySelect)
@@ -133,6 +136,17 @@ void findBookByTitle(BOOK* books) {
 			getchar();
 			break;
 		case 2:
+			printf("===책 정보를 삭제합니다.===\n");
+			memset(titleP, NULL, sizeof(BOOK));
+			//(*nb)--;
+			(*pc)--;
+
+			for (int i = 0; i < *pc; i++) {
+				books[i] = books[i + 1];
+			}
+			//--(*pc);
+			break;
+		case 3:
 			printf("메뉴로 돌아갑니다.\n");
 			break;
 		default:

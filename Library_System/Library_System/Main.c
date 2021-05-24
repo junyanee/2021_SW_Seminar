@@ -25,13 +25,13 @@ int main(void) {
 	if (books == NULL) {
 		return -1;
 	}
-
 	while (1) {
 
 		switch (printMenu())
 		{
 		case 1:
 			printf("도서 입력을 선택하셨습니다.\n");
+			printf("numofbook: %d, count: %d", numOfBook, count);
 			printf("[%d권]까지 추가 저장할 수 있습니다.\n", numOfBook - count);
 			if (count == numOfBook) {
 				printf("=== 저장할 수 있는 공간이 다 찼습니다.=== \n");
@@ -48,13 +48,13 @@ int main(void) {
 		case 2:
 			printf("저자 검색을 선택하셨습니다.\n");
 			qsort(books, numOfBook, sizeof(BOOK), compareByAuthor);
-			findBookByAuthor(books);
+			findBookByAuthor(books, pc, nb);
 			break;
 
 		case 3:
 			printf("제목 검색을 선택하셨습니다.\n");
 			qsort(books, numOfBook, sizeof(BOOK), compareByName);
-			findBookByTitle(books);
+			findBookByTitle(books, pc, nb);
 			break;
 
 		case 4:
