@@ -8,13 +8,14 @@
 
 
 BOOK* reallocateBooks(BOOK* books, int* nb) {
-	//rc = nb + 1;
-	*nb = *nb + 1;
+	BOOK* backUp = books;
+	books = (BOOK*)realloc(books, sizeof(BOOK) * (*nb)*2);
 	if (books == NULL) {
-		printf("동적 메모리 할당 실패\n");
+		printf("메모리 재할당에 실패했습니다. 원래 상태로 복구합니다\n");
+		books = backUp;
 	}
 	else {
-		books = (BOOK*)realloc(books, sizeof(BOOK) * ((*nb) + 1));
+		printf("메모리 재할당 성공");
 	}
 	return books;
 }
@@ -48,9 +49,11 @@ int main(void) {
 			if (count == numOfBook) {
 				printf("저장할 수 있는 공간이 다 찼습니다.\n");
 				printf("추가 저장을 위해 [1권]의 메모리를 할당합니다.");
+				numOfBook = numOfBook + 1;
 				printf("numofBook: %d,  count: %d", numOfBook, count);
-				reallocateBooks(books, *nb);
+				books = reallocateBooks(books, *nb);
 				printf("numofBook: %d,  count: %d", numOfBook, count);
+				addBook(books, pc);
 
 			}
 			else {
