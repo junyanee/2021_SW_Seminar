@@ -14,7 +14,7 @@ int printMenu() {
 	printf(" |  3. 제목 검색                                |\n");
 	printf(" |  4. 가격 순으로 정렬	                        |\n");
 	printf(" |  5. 전체 도서 정보 출력                      |\n");
-	printf(" |  6. 종료                                     |\n");
+	printf(" |  0. 종료                                     |\n");
 	printf(" |                      authored by JunHyunPark |\n");
 	printf(" ================================================\n");
 	printf("\n");

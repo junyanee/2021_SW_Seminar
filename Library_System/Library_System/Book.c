@@ -54,12 +54,37 @@ void showBook(const BOOK* books, int* pc) {
 }
 
 void findBookByAuthor(BOOK* books) {
+	int modifySelect = -1;
 	printf("검색하고자 하는 저자를 입력하세요: ");
 	BOOK authorKey;
 	gets(authorKey.author);
 	BOOK* authorP = (int*)bsearch(&authorKey, books, 10, sizeof(BOOK), compareByAuthor);
 	if (authorP != NULL) {
 		printBookInfo(authorP);
+		printf("해당 자료를 수정하시겠습니까?\n");
+		printf("1. 수정     2. 나가기");
+		scanf("%d", &modifySelect);
+		getchar();
+		switch (modifySelect)
+		{
+		case 1:
+			printf("===책 정보를 수정합니다.===\n");
+			printf("제목을 입력하세요: ");
+			gets(authorP->name);
+			printf("저자를 입력하세요: ");
+			gets(authorP->author);
+			printf("가격을 입력하세요: ");
+			scanf("%d", &authorP->price);
+			getchar();
+			break;
+		case 2: 
+			printf("메뉴로 돌아갑니다.\n");
+			break;
+		default:
+			printf("잘못된 입력입니다. 메뉴로 돌아갑니다.\n");
+			break;
+		}
+
 	}
 	else {
 		printf("해당 자료는 없습니다.\n");
@@ -67,12 +92,36 @@ void findBookByAuthor(BOOK* books) {
 }
 
 void findBookByTitle(BOOK* books) {
+	int modifySelect = -1;
 	printf("검색하고자 하는 제목을 입력하세요: ");
 	BOOK titleKey;
 	gets(titleKey.name);
 	BOOK* titleP = (int*)bsearch(&titleKey, books, 10, sizeof(BOOK), compareByName);
 	if (titleP != NULL) {
 		printBookInfo(titleP);
+		printf("해당 자료를 수정하시겠습니까?\n");
+		printf("1. 수정     2. 나가기");
+		scanf("%d", &modifySelect);
+		getchar();
+		switch (modifySelect)
+		{
+		case 1:
+			printf("===책 정보를 수정합니다.===\n");
+			printf("제목을 입력하세요: ");
+			gets(titleP->name);
+			printf("저자를 입력하세요: ");
+			gets(titleP->author);
+			printf("가격을 입력하세요: ");
+			scanf("%d", &titleP->price);
+			getchar();
+			break;
+		case 2:
+			printf("메뉴로 돌아갑니다.\n");
+			break;
+		default:
+			printf("잘못된 입력입니다. 메뉴로 돌아갑니다.\n");
+			break;
+		}
 	}
 	else {
 		printf("해당 자료는 없습니다.");
@@ -87,4 +136,3 @@ void printBookInfo(const BOOK* p) {
 	printf("==================================\n");
 	printf("\n");
 }
-

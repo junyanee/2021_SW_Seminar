@@ -58,10 +58,13 @@ int main(void) {
 			break;
 
 		case 5:
+			qsort(books, numOfBook, sizeof(BOOK), compareByPrice);
 			showBook(books, pc);
 			break;
 
-		case 6:
+
+
+		case 0:
 			printf("종료합니다.\n");
 			freeMemory(books);
 			return 0;
