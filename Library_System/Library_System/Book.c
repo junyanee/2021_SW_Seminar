@@ -72,7 +72,7 @@ void findBookByAuthor(BOOK* books, int *pc, int *nb) {
 	printf("검색하고자 하는 저자를 입력하세요: ");
 	BOOK authorKey;
 	gets(authorKey.author);
-	BOOK* authorP = (int*)bsearch(&authorKey, books, 10, sizeof(BOOK), compareByAuthor);
+	BOOK* authorP = (int*)bsearch(&authorKey, books, *nb, sizeof(BOOK), compareByAuthor);
 	if (authorP != NULL) {
 		printBookInfo(authorP);
 		printf("해당 자료를 수정 혹은 삭제하시겠습니까?\n");
@@ -116,7 +116,7 @@ void findBookByTitle(BOOK* books, int* pc, int* nb) {
 	printf("검색하고자 하는 제목을 입력하세요: ");
 	BOOK titleKey;
 	gets(titleKey.name);
-	BOOK* titleP = (int*)bsearch(&titleKey, books, 10, sizeof(BOOK), compareByName);
+	BOOK* titleP = (int*)bsearch(&titleKey, books, *nb, sizeof(BOOK), compareByName);
 	if (titleP != NULL) {
 		printBookInfo(titleP);
 		printf("해당 자료를 수정하시겠습니까?\n");
@@ -142,14 +142,37 @@ void findBookByTitle(BOOK* books, int* pc, int* nb) {
 			//memset(titleP, NULL, sizeof(BOOK));
 			//(*nb)--;
 			//(*pc)--;
-			int i, j = 0;
-			i = titleP - books;
-			printf("%d", i);
-			for (int j = i; j < (*pc) -1; j++) {
+			//int i, j = 0; //ㅇㅇ
+			//i = titleP - books; //ㅇㅇ 삭제하고자 하는 인덱스
+			//printf("%d", i); //ㅇㅇ
+			//for (int j = i; j < (*pc) -1; j++) { //ㅇㅇ
 			//	strcpy(books[i].name, books[i + 1].name);
 			//	strcpy(books[i].author, books[i + 1].author);
 			//	books[i].price = books[i + 1].price;
-				memcpy(&books[i],&books[i+1], sizeof(BOOK));
+			//	memcpy(&books[i],&books[i+1], sizeof(BOOK)); //ㅇㅇ
+
+		//	for (int i = titleP - books; i < sizeof(books) / sizeof(BOOK) -2; i++) {
+		//		//memcpy(&books[i], &books[i + 1], sizeof(BOOK));
+		//			strcpy(books[i].name, books[i + 1].name);
+		//		strcpy(books[i].author, books[i + 1].author);
+		//		books[i].price = books[i + 1].price;
+		//	}
+
+			for (int i = 0; i < sizeof(books) / sizeof(BOOK); i++) {
+				if (strcmp(titleP->name, books[i].name) == 0) {
+					(*pc)--;
+					printf("삭제완료");
+
+					if (i!= sizeof(books) / sizeof(BOOK) - 1) {
+						for (int j = i; j < sizeof(books) / sizeof(BOOK); j++) {
+							strcpy(books[i].name, books[i + 1].name);
+							strcpy(books[i].author, books[i + 1].author);
+							books[i].price = books[i + 1].price;
+						}
+						*books[sizeof(books) / sizeof(BOOK) - 1].name = NULL;
+						*books[sizeof(books) / sizeof(BOOK) - 1].author = NULL;
+					}
+				}
 			}
 			(*pc)--;
 			break;

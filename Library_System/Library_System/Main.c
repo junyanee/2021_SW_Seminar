@@ -25,6 +25,7 @@ int main(void) {
 	if (books == NULL) {
 		return -1;
 	}
+	
 	while (1) {
 
 		switch (printMenu())
