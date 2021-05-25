@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
 
 	printf("전체 사용자 수를 입력하세요: ");
 
-	fp = fopen("password.txt", "w");
+	fp = fopen("password.dat", "wb");
 	if (fp == NULL) {
 		printf("파일 열기 실패\n");
 		return -1;
@@ -43,6 +43,7 @@ int main(int argc, char* argv[]) {
 		printf("pw를 입력하세요: ");
 		scanf("%s", loginInfo[i].password);
 		fprintf(fp, "%s %s\n", loginInfo[i].id, loginInfo[i].password);
+		fwrite(loginInfo, sizeof(LOGIN_INFO)*userCount, userCount, fp);
 	}
 
 	fclose(fp);

@@ -1,1 +1,5 @@
-﻿  2021.05.25_SW_Seminar.vcxproj -> C:\Users\junyanee\source\repos\2021.05.25_SW_Seminar\Debug\2021.05.25_SW_Seminar.exe
+﻿  Lab12_prog3.c
+C:\Users\junyanee\source\repos\2021.05.25_SW_Seminar\2021.05.25_SW_Seminar\Lab12_prog3.c(56,7): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\junyanee\source\repos\2021.05.25_SW_Seminar\2021.05.25_SW_Seminar\Lab12_prog3.c(58,1): warning C4133: '초기화 중': 'int *'과(와) 'LOGIN_INFO *' 사이의 형식이 호환되지 않습니다.
+C:\Users\junyanee\source\repos\2021.05.25_SW_Seminar\2021.05.25_SW_Seminar\Lab12_prog3.c(63,1): warning C4133: '초기화 중': 'int *'과(와) 'LOGIN_INFO *' 사이의 형식이 호환되지 않습니다.
+  2021.05.25_SW_Seminar.vcxproj -> C:\Users\junyanee\source\repos\2021.05.25_SW_Seminar\Debug\2021.05.25_SW_Seminar.exe
