@@ -93,9 +93,9 @@ void findBookByAuthor(BOOK* books, int *pc, int *nb) {
 			break;
 		case 2:
 			printf("===책 정보를 삭제합니다.===\n");
-			memset(authorP, NULL, sizeof(BOOK));
-			(*nb)--;
-			(*pc)--;
+		//	memset(authorP, NULL, sizeof(BOOK));
+		//	(*nb)--;
+		//	(*pc)--;
 			break;
 		case 3: 
 			printf("메뉴로 돌아갑니다.\n");
@@ -136,15 +136,22 @@ void findBookByTitle(BOOK* books, int* pc, int* nb) {
 			getchar();
 			break;
 		case 2:
+			// 배열의 인덱스를 가져와서 i에 저장
+			// i이후의 배열에서 memcpy(i, i+1)
 			printf("===책 정보를 삭제합니다.===\n");
-			memset(titleP, NULL, sizeof(BOOK));
+			//memset(titleP, NULL, sizeof(BOOK));
 			//(*nb)--;
-			(*pc)--;
-
-			for (int i = 0; i < *pc; i++) {
-				books[i] = books[i + 1];
+			//(*pc)--;
+			int i, j = 0;
+			i = titleP - books;
+			printf("%d", i);
+			for (int j = i; j < (*pc) -1; j++) {
+			//	strcpy(books[i].name, books[i + 1].name);
+			//	strcpy(books[i].author, books[i + 1].author);
+			//	books[i].price = books[i + 1].price;
+				memcpy(&books[i],&books[i+1], sizeof(BOOK));
 			}
-			//--(*pc);
+			(*pc)--;
 			break;
 		case 3:
 			printf("메뉴로 돌아갑니다.\n");

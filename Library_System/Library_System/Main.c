@@ -64,7 +64,7 @@ int main(void) {
 			break;
 
 		case 5:
-			qsort(books, numOfBook, sizeof(BOOK), compareByPrice);
+			//qsort(books, numOfBook, sizeof(BOOK), compareByPrice);
 			showBook(books, pc);
 			break;
 
