@@ -1,0 +1,7 @@
+void * bsearch ( const void * key, const void * base, size_t num, size_t size, int ( * comparator ) ( const void *, const void * ) );Binary search in array
+Searches the given key in the array pointed by base that is formed by num elements, each of a size of size bytes, and returns a void* pointer to the first entry in the table that matches the search key.
+
+To perform the search, the function compares the elements to the key by calling the function comparator specified as the last argument.
+
+Because this function performs a binary search, the values in the base array are expected to be already sorted in ascending order, with the same criteria used by comparator.
+
