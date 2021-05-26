@@ -92,10 +92,16 @@ void findBookByAuthor(BOOK* books, int *pc, int *nb) {
 			getchar();
 			break;
 		case 2:
+			// 배열의 인덱스를 가져와서 i에 저장
+			// i이후의 배열에서 memcpy(i, i+1)
 			printf("===책 정보를 삭제합니다.===\n");
-		//	memset(authorP, NULL, sizeof(BOOK));
-		//	(*nb)--;
-		//	(*pc)--;
+			int i = (authorP - books); // 삭제하고자 하는 인덱스
+
+			for (int j = i - 1; i < (*pc); i++) {
+				memcpy(&books[i], &books[i + 1], sizeof(BOOK));
+			}
+			(*pc)--;
+			break;
 			break;
 		case 3: 
 			printf("메뉴로 돌아갑니다.\n");
@@ -119,6 +125,7 @@ void findBookByTitle(BOOK* books, int* pc, int* nb) {
 	BOOK* titleP = (int*)bsearch(&titleKey, books, *nb, sizeof(BOOK), compareByName);
 	if (titleP != NULL) {
 		printBookInfo(titleP);
+		printf("%d", titleP-books);
 		printf("해당 자료를 수정하시겠습니까?\n");
 		printf("1. 수정     2. 삭제     3. 나가기");
 		scanf("%d", &modifySelect);
@@ -136,44 +143,12 @@ void findBookByTitle(BOOK* books, int* pc, int* nb) {
 			getchar();
 			break;
 		case 2:
-			// 배열의 인덱스를 가져와서 i에 저장
-			// i이후의 배열에서 memcpy(i, i+1)
 			printf("===책 정보를 삭제합니다.===\n");
-			//memset(titleP, NULL, sizeof(BOOK));
-			//(*nb)--;
-			//(*pc)--;
-			//int i, j = 0; //ㅇㅇ
-			//i = titleP - books; //ㅇㅇ 삭제하고자 하는 인덱스
-			//printf("%d", i); //ㅇㅇ
-			//for (int j = i; j < (*pc) -1; j++) { //ㅇㅇ
-			//	strcpy(books[i].name, books[i + 1].name);
-			//	strcpy(books[i].author, books[i + 1].author);
-			//	books[i].price = books[i + 1].price;
-			//	memcpy(&books[i],&books[i+1], sizeof(BOOK)); //ㅇㅇ
+			int i = (titleP - books);
 
-		//	for (int i = titleP - books; i < sizeof(books) / sizeof(BOOK) -2; i++) {
-		//		//memcpy(&books[i], &books[i + 1], sizeof(BOOK));
-		//			strcpy(books[i].name, books[i + 1].name);
-		//		strcpy(books[i].author, books[i + 1].author);
-		//		books[i].price = books[i + 1].price;
-		//	}
-
-			for (int i = 0; i < sizeof(books) / sizeof(BOOK); i++) {
-				if (strcmp(titleP->name, books[i].name) == 0) {
-					(*pc)--;
-					printf("삭제완료");
-
-					if (i!= sizeof(books) / sizeof(BOOK) - 1) {
-						for (int j = i; j < sizeof(books) / sizeof(BOOK); j++) {
-							strcpy(books[i].name, books[i + 1].name);
-							strcpy(books[i].author, books[i + 1].author);
-							books[i].price = books[i + 1].price;
-						}
-						*books[sizeof(books) / sizeof(BOOK) - 1].name = NULL;
-						*books[sizeof(books) / sizeof(BOOK) - 1].author = NULL;
-					}
-				}
-			}
+			for (int j = i-1; i < (*pc); i++) {
+				memcpy(&books[i], &books[i + 1], sizeof(BOOK));
+		}
 			(*pc)--;
 			break;
 		case 3:

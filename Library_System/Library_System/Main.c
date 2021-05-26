@@ -48,28 +48,25 @@ int main(void) {
 
 		case 2:
 			printf("저자 검색을 선택하셨습니다.\n");
-			qsort(books, numOfBook, sizeof(BOOK), compareByAuthor);
+			qsort(books, count, sizeof(BOOK), compareByAuthor);
 			findBookByAuthor(books, pc, nb);
 			break;
 
 		case 3:
 			printf("제목 검색을 선택하셨습니다.\n");
-			qsort(books, numOfBook, sizeof(BOOK), compareByName);
+			qsort(books, count, sizeof(BOOK), compareByName);
 			findBookByTitle(books, pc, nb);
 			break;
 
 		case 4:
 			printf("가격 순으로 정렬을 선택하셨습니다.\n");
-			qsort(books, numOfBook, sizeof(BOOK), compareByPrice);
+			qsort(books, count, sizeof(BOOK), compareByPrice);
 			showBook(books, pc);
 			break;
 
 		case 5:
-			//qsort(books, numOfBook, sizeof(BOOK), compareByPrice);
 			showBook(books, pc);
 			break;
-
-
 
 		case 0:
 			printf("종료합니다.\n");
