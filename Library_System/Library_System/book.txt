@@ -1,0 +1,6 @@
+8
+4
+park junhyun 5000
+ee ff 1500
+cc dd 700
+aa bb 500

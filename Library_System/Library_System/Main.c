@@ -3,10 +3,15 @@
 #include <stdlib.h>
 #include "Book.h"
 #include "Menu.h"
+#include "FileIo.h"
 
 // 프로그램이 시작될 때 최대 저장 가능한 도서 정보의 개수를 입력 받아서 동적 메모리에 book 구조체 배열을 한꺼번에 할당
 
-int main(void) {
+int main (int argc, char* argv[]) {
+
+	if (argc < 1) {
+		return -1;
+	}
 
 	int count = 0, numOfBook = 0;
 	int* pc = &count;
@@ -16,11 +21,10 @@ int main(void) {
 
 	BOOK* books = NULL;
 
-	printf("등록할 책의 권수를 입력하세요: \n");
-	scanf("%d", &numOfBook);
-	while (getchar() != '\n');
-
+	loadBookListInfo(nb, pc);
+	printf("%d, %d", numOfBook, count);
 	books = allocateBooks(nb);
+	loadBookList(books, nb, pc);
 
 	if (books == NULL) {
 		return -1;
@@ -70,6 +74,7 @@ int main(void) {
 
 		case 0:
 			printf("종료합니다.\n");
+			saveBookList(books, numOfBook, count);
 			freeMemory(books);
 			return 0;
 			break;

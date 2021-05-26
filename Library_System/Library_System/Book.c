@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "Book.h"
 #include "Menu.h"
+#include "FileIo.h"
 
 BOOK* allocateBooks(int* nb) {
 	BOOK* result = NULL;
