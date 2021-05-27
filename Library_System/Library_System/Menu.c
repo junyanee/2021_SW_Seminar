@@ -5,7 +5,6 @@
 #include "Book.h"
 #include "FileIo.h"
 
-
 int printMenu() {
 	int select = -1;
 	printf(" ================================================\n");

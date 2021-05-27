@@ -5,8 +5,6 @@
 #include "Menu.h"
 #include "FileIo.h"
 
-// 프로그램이 시작될 때 최대 저장 가능한 도서 정보의 개수를 입력 받아서 동적 메모리에 book 구조체 배열을 한꺼번에 할당
-
 int main (int argc, char* argv[]) {
 
 	if (argc < 1) {
@@ -22,7 +20,6 @@ int main (int argc, char* argv[]) {
 	BOOK* books = NULL;
 
 	loadBookListInfo(nb, pc);
-	printf("%d, %d", numOfBook, count);
 	books = allocateBooks(nb);
 	loadBookList(books, nb, pc);
 
@@ -84,6 +81,5 @@ int main (int argc, char* argv[]) {
 			break;
 		}
 	}
-
 	return 0;
 }

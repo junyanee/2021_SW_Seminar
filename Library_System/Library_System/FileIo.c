@@ -30,7 +30,6 @@ void loadBookList(BOOK* books, int* nb, int* pc) {
 	for (int i = 0; i <  *pc; i++) {
 		fscanf(fp, "%s %s %d\n", books[i].name, books[i].author, &books[i].price);
 	}
-
 	fclose(fp);
 }
 
@@ -47,6 +46,5 @@ void saveBookList(BOOK* books, int numberOfBook, int count) {
 	for (int i = 0; i < count; i++) {
 		fprintf(fp, "%s %s %d\n", books[i].name, books[i].author, books[i].price);
 	}
-
 	fclose(fp);
 }

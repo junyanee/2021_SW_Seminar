@@ -1,6 +1,7 @@
-8
-4
-park junhyun 5000
-ee ff 1500
-cc dd 700
-aa bb 500
+10
+5
+SoftwareArchitecture jhKim 17000
+JAVA swChoi 15000
+TensorflowAI bsKim 14000
+DatabaseModeling ijKim 13000
+CProgramming hjWoo 12000

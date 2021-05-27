@@ -42,7 +42,6 @@ void addBook(BOOK* book, int* pc) {
 	char author[30] = { NULL };
 	int price = 0;
 
-
 	printf("===========새로운 도서를 추가합니다===========\n");
 	printf("제목을 입력하세요: ");
 	gets(title);
@@ -77,7 +76,7 @@ void findBookByAuthor(BOOK* books, int *pc, int *nb) {
 	if (authorP != NULL) {
 		printBookInfo(authorP);
 		printf("해당 자료를 수정 혹은 삭제하시겠습니까?\n");
-		printf("1. 수정     2. 삭제     3. 나가기");
+		printf("1. 수정     2. 삭제     3. 나가기\n");
 		scanf("%d", &modifySelect);
 		getchar();
 		switch (modifySelect)
@@ -92,6 +91,7 @@ void findBookByAuthor(BOOK* books, int *pc, int *nb) {
 			scanf("%d", &authorP->price);
 			getchar();
 			break;
+
 		case 2:
 			// 배열의 인덱스를 가져와서 i에 저장
 			// i이후의 배열에서 memcpy(i, i+1)
@@ -103,15 +103,15 @@ void findBookByAuthor(BOOK* books, int *pc, int *nb) {
 			}
 			(*pc)--;
 			break;
-			break;
+
 		case 3: 
 			printf("메뉴로 돌아갑니다.\n");
 			break;
+
 		default:
 			printf("잘못된 입력입니다. 메뉴로 돌아갑니다.\n");
 			break;
 		}
-
 	}
 	else {
 		printf("해당 자료는 없습니다.\n");
@@ -126,7 +126,6 @@ void findBookByTitle(BOOK* books, int* pc, int* nb) {
 	BOOK* titleP = (int*)bsearch(&titleKey, books, *nb, sizeof(BOOK), compareByName);
 	if (titleP != NULL) {
 		printBookInfo(titleP);
-		printf("%d", titleP-books);
 		printf("해당 자료를 수정하시겠습니까?\n");
 		printf("1. 수정     2. 삭제     3. 나가기");
 		scanf("%d", &modifySelect);
@@ -143,6 +142,7 @@ void findBookByTitle(BOOK* books, int* pc, int* nb) {
 			scanf("%d", &titleP->price);
 			getchar();
 			break;
+
 		case 2:
 			printf("===책 정보를 삭제합니다.===\n");
 			int i = (titleP - books);
@@ -152,9 +152,11 @@ void findBookByTitle(BOOK* books, int* pc, int* nb) {
 		}
 			(*pc)--;
 			break;
+
 		case 3:
 			printf("메뉴로 돌아갑니다.\n");
 			break;
+
 		default:
 			printf("잘못된 입력입니다. 메뉴로 돌아갑니다.\n");
 			break;
