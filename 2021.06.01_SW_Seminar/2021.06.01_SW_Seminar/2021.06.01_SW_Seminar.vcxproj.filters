@@ -24,10 +24,17 @@
     <ClCompile Include="3.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="4.c">
+    <ClCompile Include="4.c">
       <Filter>소스 파일</Filter>
-    </None>
+    </ClCompile>
+    <ClCompile Include="5.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="6.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="7.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
